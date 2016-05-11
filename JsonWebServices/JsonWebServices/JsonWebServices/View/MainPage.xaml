@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JsonWebServices.View.MainPage">
+  <ContentPage.Content>
+    <StackLayout Padding="30">
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Latitude" WidthRequest="130"></Label>
+        <Entry x:Name="txtLatitude" WidthRequest="150"></Entry>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Longitude" WidthRequest="130"></Label>
+        <Entry x:Name="txtLongitude" WidthRequest="150"></Entry>
+      </StackLayout>
+      <Button x:Name="btnSearch" Clicked="OnClicked"
+              WidthRequest="75" Text="Search" TextColor="White"
+              BackgroundColor="Blue"></Button>
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Location: " TextColor="Green"
+               WidthRequest="130"></Label>
+        <Label Text="{Binding StationName}"></Label>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Elevation: " TextColor="Green"
+               WidthRequest="130"></Label>
+        <Label Text="{Binding Elevation}"></Label>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Temperature: " TextColor="Green"
+               WidthRequest="130"></Label>
+        <Label Text="{Binding Temperature}"></Label>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Humidity: " TextColor="Green"
+               WidthRequest="130"></Label>
+        <Label Text="{Binding Humidity}"></Label>
+      </StackLayout>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
